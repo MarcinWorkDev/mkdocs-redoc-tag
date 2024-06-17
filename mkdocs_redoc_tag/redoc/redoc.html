@@ -33,7 +33,7 @@
       document.getElementById("slate-css").media = ""
       Redoc.init(
         openapi_spec_url,
-        { theme: redark },
+        { theme: redark, nativeScrollbars: true },
         document.getElementById('redoc-container'),
       );
     }
@@ -42,7 +42,7 @@
       document.getElementById("slate-css").media = "none"
       Redoc.init(
         openapi_spec_url,
-        {},
+        { nativeScrollbars: true },
         document.getElementById('redoc-container'),
       );
     }
