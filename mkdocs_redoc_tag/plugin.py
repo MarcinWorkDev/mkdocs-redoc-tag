@@ -101,12 +101,14 @@ class RedocPlugin(BasePlugin):
                 iframe_id_list.append(cur_id)
 
                 openapi_spec_url = self.path_to_url(page.file, redoc_ele.get("src", ""))
+                custom_props = redoc_ele.attrs
                 output_from_parsed_template = template.render(
                     css_dir=css_dir,
                     js_dir=js_dir,
                     background=self.config["background"],
                     id=cur_id,
                     openapi_spec_url=openapi_spec_url,
+                    redoc_custom_props=custom_props,
                 )
                 with open(os.path.join(page_dir, iframe_filename), "w") as f:
                     f.write(output_from_parsed_template)
