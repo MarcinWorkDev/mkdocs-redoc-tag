@@ -49,14 +49,6 @@
 `,Eu=ha.div.attrs((e=>({[vf]:e.id})))`
   padding: ${e=>e.theme.spacing.sectionVertical}px 0;
 
-  &:last-child {
-    min-height: calc(100vh + 1px);
-  }
-
-  & > &:last-child {
-    min-height: initial;
-  }
-
   ${fa.lessThan("medium",!0)`
     padding: 0;
   `}
