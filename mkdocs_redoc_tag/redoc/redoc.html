@@ -6,16 +6,10 @@
   <title>Redoc</title>
   <link rel="stylesheet" type="text/css" id="slate-css" media="none" href="{{ css_dir }}redark.css" />
   <script src="{{ js_dir }}redark.js" charset="UTF-8"> </script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
 </head>
 
-<body style="background: {{background}};">
-  <div id="redoc-container"></div>
+<body style="overscroll-behavior-x: auto; background: {{background}};">
+  <div id="redoc-container" style="margin-top: 1.6rem; position: relative;"></div>
   <script src="{{ js_dir }}redoc.standalone.js" charset="UTF-8"> </script>
   <script>
     const openapi_spec_url = "{{openapi_spec_url}}";
